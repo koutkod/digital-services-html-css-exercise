@@ -73,7 +73,7 @@ header nav li {
     margin-top: 1rem; /* Adds space above the buttons */
 }
 
-p {
+.hero-text>p {
     margin: 20px;
 }
 
