@@ -1,0 +1,176 @@
+/* Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Makes sure padding does not affect the total width and height of elements */
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    font-family: Arial, sans-serif;
+    background: #fff; /* Assuming you want a white background for the body */
+    display: flex; /* Sets the body display to flex to use flexbox layout */
+    flex-direction: column; /* Stacks child elements vertically */
+}
+
+body > * {
+    width: 100%; /* Ensures that all direct children of body take up 100% of the body's width */
+}
+
+main {
+    flex: 1; /* Allows the main content to grow and shrink as needed */
+    display: flex; /* Sets the main display to flex to use flexbox layout */
+    flex-direction: column; /* Stacks child elements vertically within the main tag */
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f5f5f5;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+header nav ul {
+    display: none; /* Hides the nav menu by default */
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+header nav li {
+    margin: 0 10px; /* Horizontal spacing for navigation items */
+}
+
+/* Main content styles */
+.hero {
+    text-align: center;
+    padding: 1rem 0; /* Adds vertical padding within the hero section */
+}
+
+.hero-text h1,
+.hero-text h2 {
+    margin: 10px 10px; /* Adds a top and bottom margin to headings */
+}
+
+.hero-buttons {
+    margin-top: 1rem; /* Adds space above the buttons */
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Photo styles */
+.photo,
+.photo-background {
+    display: flex; /* Uses flexbox for centering content */
+    justify-content: center; /* Centers the child img horizontally */
+    margin: 0 auto; /* Centers the photos horizontally */
+}
+
+.photo img {
+    width: 100%; /* Makes the image responsive */
+    height: auto;
+    border: 1px dashed #ccc;
+}
+
+.photo-background {
+    width: 100%; /* Ensures the background stretches full width */
+    background-color: #717D96;
+    padding: 1rem; /* Adds padding around the image */
+    margin-bottom: 0; /* Ensures there's no gap between this section and the footer */
+}
+
+.photo-background img {
+    width: calc(100% - 2rem); /* Subtract padding from the width */
+    height: auto;
+    max-width: 600px; /* Maximum width of the image */
+    border: 1px dashed #ccc;
+    margin: 0 auto; /* Centers the image within the .photo-background block */
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 768px) {
+    /* Other responsive styles remain unchanged */
+
+    .photo-background img {
+        width: auto; /* Resets the width to auto on larger screens */
+        max-width: 100%; /* Allows the image to grow up to 100% of its container */
+    }
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns footer content to the start (left) */
+}
+
+footer nav ul {
+    padding: 0;
+    list-style: none; /* Removes the bullet points */
+}
+
+footer nav li {
+    margin: 0.5rem 0;
+}
+
+/* Responsive styles for larger screens */
+@media (min-width: 768px) {
+    .menu-toggle {
+        display: none; /* Hide the menu toggle button on larger screens */
+    }
+
+    header nav ul {
+        display: flex; /* Display the nav menu inline */
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer nav li {
+        margin: 0 10px; /* Adds horizontal spacing between navigation items */
+    }
+}
